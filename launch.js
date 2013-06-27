@@ -1,8 +1,8 @@
 document.getElementById('relaunch').onclick = function() {
-  setTimeout(function() {
+  setInterval(function() {
     navigator.mozApps.getSelf().onsuccess = function _onAppReady(evt) {
       var app = evt.target.result;
       app.launch();
     }
-  }, 10000);
+  }, 4000);
 }
